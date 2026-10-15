@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zerova VPN - Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Zerova VPN, a fast, private, no-logs WireGuard VPN client by Across Cloud LLC." />
+  <style>
+    :root {
+      --bg: #0A0E1A;
+      --surface: #141A2B;
+      --divider: #283055;
+      --text: #F3F5FC;
+      --muted: #8E97B4;
+      --accent: #7C6CFF;
+      --aqua: #35E6D0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 48px 22px 80px; }
+    .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .mark {
+      width: 42px; height: 42px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--aqua));
+      display: flex; align-items: center; justify-content: center;
+      color: #0A0E1A; font-weight: 800; font-size: 19px;
+    }
+    h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.4px; }
+    .sub { color: var(--muted); font-size: 14px; margin: 0; }
+    .meta {
+      display: inline-block; margin-top: 14px; padding: 6px 12px;
+      background: var(--surface); border: 1px solid var(--divider);
+      border-radius: 20px; color: var(--muted); font-size: 12.5px;
+    }
+    h2 {
+      font-size: 17px; margin: 34px 0 10px; color: var(--aqua);
+      letter-spacing: 0.2px;
+    }
+    p, li { color: var(--text); font-size: 15px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .card {
+      background: var(--surface); border: 1px solid var(--divider);
+      border-radius: 14px; padding: 18px 20px; margin: 18px 0;
+    }
+    code {
+      background: #10162A; padding: 2px 6px; border-radius: 5px;
+      font-size: 13px; color: var(--aqua);
+    }
+    footer {
+      margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--divider);
+      color: var(--muted); font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">Z</div>
+      <div>
+        <h1>Zerova VPN</h1>
+        <p class="sub">Fast, private, no-logs WireGuard VPN &middot; Across Cloud LLC</p>
+      </div>
+    </div>
+    <span class="meta">Privacy Policy &middot; Effective: October 16, 2026</span>
+
+    <h2>1. Overview</h2>
+    <p>
+      Zerova VPN (&ldquo;the App&rdquo;) is a VPN client for Android published by
+      Across Cloud LLC (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). This Privacy Policy
+      explains what information the App does and does not collect, and how it protects
+      your privacy. By using Zerova VPN you agree to this policy.
+    </p>
+
+    <div class="card">
+      <strong>In one sentence:</strong> Zerova VPN keeps no activity logs and requires
+      no account; your WireGuard private key is generated on your device and never
+      leaves it.
+    </div>
+
+    <h2>2. Information We Do Not Collect</h2>
+    <ul>
+      <li>We do <strong>not</strong> require or offer accounts, sign-ups, or logins.</li>
+      <li>We do <strong>not</strong> log your browsing history, the sites or services
+          you visit, DNS queries, or the content of your traffic.</li>
+      <li>We do <strong>not</strong> collect your name, email address, phone number,
+          contacts, location, or advertising identifiers.</li>
+      <li>We do <strong>not</strong> include third-party advertising, analytics, or
+          tracking SDKs.</li>
+      <li>We do <strong>not</strong> sell, rent, or share your data with third parties
+          for marketing.</li>
+    </ul>
+
+    <h2>3. VPN Service and Device Key (Technical Data)</h2>
+    <p>
+      The App uses the Android <code>VpnService</code> API to create an encrypted
+      WireGuard tunnel between your device and the VPN server you select. All traffic
+      routed through the tunnel is encrypted in transit.
+    </p>
+    <p>
+      To give each install its own private tunnel, the App generates a WireGuard key
+      pair <strong>on your device</strong>. Only the <strong>public</strong> key is sent
+      to our VPN server when you connect, so the server can authorise your tunnel. The
+      <strong>private</strong> key never leaves your device and is never sent to us.
+    </p>
+    <p>
+      This public key is a random, device-generated value. It is <strong>not linked</strong>
+      to your name, email, or any account (we have none), and it is <strong>not used to
+      track</strong> your browsing. It is stored on the server only to keep your tunnel
+      working, alongside a random tunnel address and a last-seen time used to clean up
+      idle entries, and it is removed when no longer needed.
+    </p>
+    <p>
+      Operating a VPN necessarily means your traffic passes through our servers to reach
+      the internet. We do <strong>not</strong> monitor, record, or store that traffic,
+      and we keep <strong>no</strong> connection logs tied to your identity.
+    </p>
+
+    <h2>4. Information Stored on Your Device</h2>
+    <p>
+      The App stores a small amount of data <strong>locally on your device only</strong>.
+      The private key and settings never leave your device:
+    </p>
+    <ul>
+      <li><strong>VPN private key</strong> &mdash; generated on your device and stored in
+          Android Keystore-backed secure storage. Never transmitted.</li>
+      <li><strong>Server-assigned tunnel address</strong> &mdash; stored locally.</li>
+      <li><strong>App settings</strong> (selected server, auto-connect, DNS, onboarding
+          and privacy acceptance) &mdash; stored locally via <code>shared_preferences</code>.</li>
+    </ul>
+    <p>
+      You can remove all locally stored data at any time by clearing the App's data in
+      Android Settings, or by uninstalling the App.
+    </p>
+
+    <h2>5. Third Parties</h2>
+    <p>
+      We do not sell or share personal data. To operate the service we rely on hosting
+      providers for our VPN servers and for this website. These providers may process
+      technical network metadata as necessary to deliver the service, under their own
+      policies. We do not receive your browsing activity from them.
+    </p>
+
+    <h2>6. Security</h2>
+    <p>
+      We use industry-standard encryption (WireGuard) for tunneled traffic, keep our
+      servers updated and access-restricted (key-based SSH, firewall rules), and never
+      bundle shared secrets in the App. No method of transmission or storage is 100%
+      secure, but we design the App to hold as little as possible about you.
+    </p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+      The App is not directed to children under 13, and we do not knowingly collect data
+      from children. Because we collect no personal data, there is nothing for us to
+      delete or disclose.
+    </p>
+
+    <h2>8. Your Rights</h2>
+    <p>
+      Because we do not collect personal data or create accounts, there is generally
+      nothing for us to access, correct, or delete. You may uninstall the App at any time
+      to remove all local data.
+    </p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      If this policy changes, the updated version will be published on this page and
+      reflected in a future app update.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      For any privacy-related question, contact:<br />
+      <strong>Across Cloud LLC</strong><br />
+      Email: <a href="mailto:iam.nmzar@gmail.com">iam.nmzar@gmail.com</a>
+    </p>
+
+    <footer>
+      &copy; 2026 Across Cloud LLC. Zerova VPN keeps no logs and requires no account.
+      Your private key never leaves your device.
+    </footer>
+  </div>
+</body>
+</html>
