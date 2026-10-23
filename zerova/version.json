@@ -2,8 +2,8 @@
   "packageId": "com.acrosscld.zerova",
   "minVersionCode": 2,
   "minVersionName": "1.0.1",
-  "latestVersionCode": 2,
-  "latestVersionName": "1.0.1",
+  "latestVersionCode": 3,
+  "latestVersionName": "1.1.0",
   "playUrl": "https://play.google.com/store/apps/details?id=com.acrosscld.zerova",
   "message": "A new version of Zerova VPN is required. Please update to keep using the app."
 }
