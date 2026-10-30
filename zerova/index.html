@@ -68,7 +68,7 @@
         <p class="sub">Fast, private, no-logs WireGuard VPN &middot; Across Cloud LLC</p>
       </div>
     </div>
-    <span class="meta">Privacy Policy &middot; Effective: October 16, 2026 &middot; Last updated: October 24, 2026</span>
+    <span class="meta">Privacy Policy &middot; Effective: October 16, 2026 &middot; Last updated: October 30, 2026</span>
 
     <h2>1. Overview</h2>
     <p>
@@ -91,8 +91,9 @@
           you visit, DNS queries, or the content of your traffic.</li>
       <li>We do <strong>not</strong> collect your name, email address, phone number, or
           contacts. The App does not request location permission.</li>
-      <li>We do <strong>not</strong> include any analytics SDK. The only third-party SDK
-          that collects data is Google Mobile Ads (AdMob), described in section 6.</li>
+      <li>We do <strong>not</strong> include advertising networks other than Google
+          Mobile Ads (AdMob), described in section 6. Firebase Analytics and
+          Crashlytics are used for diagnostics only, described in section 7.</li>
       <li>We do <strong>not</strong> sell or rent your data, and we do not share it with
           data brokers.</li>
     </ul>
@@ -133,6 +134,10 @@
       <li><strong>Server-assigned tunnel address</strong> &mdash; stored locally.</li>
       <li><strong>App settings</strong> (selected server, auto-connect, DNS, onboarding
           and privacy acceptance) &mdash; stored locally via <code>shared_preferences</code>.</li>
+      <li><strong>Split-tunnel selection</strong> &mdash; the package names of the apps you
+          choose to bypass the VPN. Stored locally only; the list of installed apps is
+          never transmitted, and the App declares no <code>QUERY_ALL_PACKAGES</code>
+          permission (it queries launcher apps only).</li>
     </ul>
     <p>
       You can remove all locally stored data at any time by clearing the App's data in
@@ -157,7 +162,7 @@
       Zerova VPN is free. To pay for the VPN servers, the App shows ads supplied by
       Google AdMob. Ads are never shown on the Session screen, during connection setup,
       or before your first successful connection. New installs are ad-free for the
-      first 72 hours.
+      first 6 hours, and no ad is shown until you have connected twice.
     </p>
     <ul>
       <li><strong>What AdMob may collect:</strong> your device&rsquo;s advertising ID
@@ -181,8 +186,9 @@
       <li><strong>Ad-free use:</strong> you can watch a rewarded video in Settings to use
           the App without ads for a limited time.</li>
       <li><strong>VPN integrity:</strong> ads are delivered through the same encrypted
-          tunnel as all other traffic. We do not split-tunnel, redirect, or intercept ad
-          traffic, and we never manipulate ads for revenue.</li>
+          tunnel as all other traffic. The App cannot be excluded from its own tunnel, so
+          ad traffic is never split-tunnelled, redirected, or intercepted, and we never
+          manipulate ads for revenue.</li>
     </ul>
     <p>
       Because ads are served by Google, the App includes the Google Mobile Ads SDK.
@@ -192,7 +198,35 @@
       preventing fraud.
     </p>
 
-    <h2>7. Security</h2>
+    <h2>7. Analytics and Diagnostics (Firebase)</h2>
+    <p>
+      The App uses Google Firebase Analytics and Firebase Crashlytics to understand how
+      the App is used and to fix problems. Collection starts only after you accept this
+      policy and the advertising consent choice is resolved.
+    </p>
+    <ul>
+      <li><strong>Firebase Analytics collects:</strong> app opens, app version, device
+          model and operating system, approximate region derived from the IP address, and
+          in-app events such as &ldquo;connected&rdquo;, &ldquo;disconnected&rdquo;,
+          &ldquo;server switched&rdquo;, &ldquo;reward earned&rdquo; and
+          &ldquo;feedback sent&rdquo;.</li>
+      <li><strong>Crashlytics collects:</strong> crash and error reports, including the
+          stack trace, device state at the time, app version and an installation
+          identifier.</li>
+      <li><strong>It does not collect:</strong> your browsing history, DNS queries, the
+          contents of your VPN traffic, the reason you pick in the feedback form, or a
+          record of the apps installed on your device.</li>
+      <li><strong>Why:</strong> to diagnose crashes, measure retention, and understand
+          which features are used.</li>
+      <li><strong>Who receives it:</strong> Google LLC, acting as our data processor.</li>
+    </ul>
+    <p>
+      Split tunnelling (section 4) reads the list of apps you can launch so you can pick
+      which ones bypass the tunnel. That list is read on your device, is never
+      transmitted, and is not stored anywhere except in your own local settings.
+    </p>
+
+    <h2>8. Security</h2>
     <p>
       We use industry-standard encryption (WireGuard) for tunneled traffic, keep our
       servers updated and access-restricted (key-based SSH, firewall rules), and never
@@ -200,7 +234,7 @@
       secure, but we design the App to hold as little as possible about you.
     </p>
 
-    <h2>8. Children's Privacy</h2>
+    <h2>9. Children's Privacy</h2>
     <p>
       The App is not directed to children under 13, and we do not knowingly collect data
       from children. Ads are configured with a maximum content rating of G and sensitive
@@ -208,7 +242,7 @@
       will help you remove any local data.
     </p>
 
-    <h2>9. Your Rights</h2>
+    <h2>10. Your Rights</h2>
     <p>
       Depending on where you live, you may have rights to access, correct, or delete
       personal data, and to object to processing. We hold no account for you, so the only
@@ -220,13 +254,13 @@
       settings. You may uninstall the App at any time to remove all local data.
     </p>
 
-    <h2>10. Changes to This Policy</h2>
+    <h2>11. Changes to This Policy</h2>
     <p>
       If this policy changes, the updated version will be published on this page and
       reflected in a future app update.
     </p>
 
-    <h2>11. Contact</h2>
+    <h2>12. Contact</h2>
     <p>
       For any privacy-related question, contact:<br />
       <strong>Across Cloud LLC</strong><br />
