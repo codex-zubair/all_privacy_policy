@@ -1,0 +1,18 @@
+{
+  "adsEnabled": true,
+  "welcomeFreeMinutes": 45,
+  "sessionMinutes": 45,
+  "sessionWarnMinutes": 2,
+  "preConnectInterstitial": true,
+  "postDisconnectInterstitial": true,
+  "rewarded": true,
+  "welcomeRewardHours": 24,
+  "rewardHours": 6,
+  "maxRewardsPerDay": 8,
+  "adFreeBankCapHours": 48,
+  "minSecondsBetweenInterstitials": 60,
+  "maxInterstitialsPerDay": 0,
+  "noticeText": "",
+  "noticeUrl": "",
+  "splitTunnelEnabled": true
+}
